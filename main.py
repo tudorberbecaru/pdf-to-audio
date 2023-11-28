@@ -7,10 +7,10 @@ import PyPDF2
 import wave
 
 
-# API Key for the Text-to-Speech service (replace with your actual API key)
+# API Key for Eden AI (replace with your actual API key)
 PRODUCTION_API_KEY = ""
 
-# API endpoint for the Text-to-Speech service
+# API endpoint for Eden AI
 URL = "https://api.edenai.run/v2/audio/text_to_speech"
 
 # Headers for the HTTP request
@@ -33,7 +33,7 @@ for i in range(len(reader.pages)):
     page = reader.pages[i]
     pdf_text += page.extract_text()
 
-# Payload for the Text-to-Speech API request
+# Payload for the Eden AI API request
 payload = {
     "response_as_dict": "true",
     "attributes_as_list": "false",
@@ -49,7 +49,7 @@ payload = {
     "sampling_rate": "0",
 }
 
-# Make a POST request to the Text-to-Speech API
+# Make a POST request to the Eden AI API
 response = requests.post(URL, params=payload, headers=headers)
 response.raise_for_status()
 
