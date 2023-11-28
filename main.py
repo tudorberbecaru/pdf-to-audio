@@ -1,5 +1,10 @@
 import tkinter
 from tkinter import filedialog
+import requests
+import json
+import base64
+import PyPDF2
+import wave
 
 tkinter.Tk().withdraw()  # prevents an empty tkinter window from appearing
 
