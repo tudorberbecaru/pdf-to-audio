@@ -3,7 +3,7 @@ from tkinter import filedialog
 import requests
 import json
 import base64
-import PyPDF2
+import pypdf
 import wave
 
 
@@ -27,7 +27,7 @@ tkinter.Tk().withdraw()
 pdf = filedialog.askopenfile(mode='r', title='Select PDF File', initialdir='./', filetypes=[('PDF Files', '*.pdf')])
 
 # Read the PDF file and extract text from each page
-reader = PyPDF2.PdfReader(pdf.name)
+reader = pypdf.PdfReader(pdf.name)
 pdf_text = ''
 for i in range(len(reader.pages)):
     page = reader.pages[i]

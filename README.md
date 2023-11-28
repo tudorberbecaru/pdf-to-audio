@@ -9,7 +9,7 @@ This script leverages the Eden AI API to convert text extracted from PDF documen
 ## Requirements
 
 - Python 3.x
-- PyPDF2 3.0.1
+- pypdf 3.17.1
 - requests 2.31.0
 
 ## Installation
